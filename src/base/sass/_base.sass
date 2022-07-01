@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+html
+	color: $primary
+	font-size: 16px
+
+@media only screen and (max-width:812px)
+	html
+		font-size: 14px
+
+@media only screen and (min-width:421px) and (max-width:812px) 
+	html 
+		font-size: 12px
+
+body
+	&.active
+		overflow: hidden
+		.header__bottom
+			transform: translateY(0)
+		.hamburger
+			transition: transform .3s ease
+			&::before, &::after, > span
+				width: 60%
+
+			span
+				left: -50px
+				opacity: 0
+
+			&::before, &::after
+				top: 50%
+				position: absolute
+
+			&::after
+				transform: rotate(-45deg)
+
+			&::before
+				transform: rotate(45deg)

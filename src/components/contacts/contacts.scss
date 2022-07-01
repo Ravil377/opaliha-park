@@ -1,0 +1,107 @@
+.contacts {
+    background: #EDF5F8;
+}
+
+.contacts__content {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contacts__info {
+    margin-top: 20px;
+    ul {
+        list-style: none;
+        li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 27px;
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 26px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &::after {
+                content: '';
+                left: 0;
+                top: 7px;
+                background-repeat: no-repeat;
+                position: absolute;
+            }
+            &:nth-child(1) {
+                &::after { 
+                    width: 18px;
+                    height: 29px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='14' height='22' viewBox='0 0 14 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 2V20C13 20.6 12.6 21 12 21H2C1.4 21 1 20.6 1 20V2C1 1.4 1.4 1 2 1H12C12.6 1 13 1.4 13 2Z' stroke='%2370B30E' stroke-width='2' stroke-linecap='square' stroke-linejoin='round'/%3E%3Cpath d='M6 18H8' stroke='%2370B30E' stroke-width='2' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+                }
+            }
+            &:nth-child(2) {
+                &::after { 
+                    width: 29px;
+                    height: 20px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 1H1V15H21V1Z' stroke='%2370B30E' stroke-width='2' stroke-linecap='square'/%3E%3Cpath d='M1 1L11 10L21 1' stroke='%2370B30E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+                }
+            } 
+            &:nth-child(3) {
+                &::after { 
+                    width: 18px;
+                    height: 26px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='27' viewBox='0 0 18 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2_229)'%3E%3Cpath d='M9 25C14.3 19.4 17 14.1 17 9C17 4.6 13.4 1 9 1C4.6 1 1 4.6 1 9C1 14.1 3.7 19.4 9 25Z' stroke='%2370B30E' stroke-width='2' stroke-linecap='square'/%3E%3Cpath d='M9.00001 10.3002C9.71798 10.3002 10.3 9.71817 10.3 9.0002C10.3 8.28223 9.71798 7.7002 9.00001 7.7002C8.28204 7.7002 7.70001 8.28223 7.70001 9.0002C7.70001 9.71817 8.28204 10.3002 9.00001 10.3002Z' stroke='%2370B30E' stroke-width='2' stroke-linecap='square'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2_229'%3E%3Crect width='18' height='26.5' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                }
+            }                      
+            a, p {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 27px;
+                text-decoration: none;
+                display: block;
+            }
+            span {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 27px;
+                display: block;
+            }
+        }
+    }
+}
+.contacts__how {
+    margin-top: 56px;
+    padding: 29px;
+    padding-top: 0;
+    padding-right: 53px;
+    border-radius: 60px 30px 0px 30px / 0px 30px 0px 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 23.2px rgba(93, 161, 186, 0.15);
+}
+.contacts__how-title {
+    font-family: 'Lumios';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    color: $green;
+}
+.contacts__how-desc {
+    margin-top: 20px;
+    p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 27px;
+    }
+}
+.contacts__map {
+    margin-top: 50px;
+    filter: drop-shadow(0px 0px 23.2px rgba(93, 161, 186, 0.15));
+    border-radius: 60px 30px 0px 30px / 0px 30px 0px 30px;
+    overflow: hidden;
+    min-height: 500px;
+    @media (min-width: 992px) {
+        min-height: unset;
+        padding-left: 40px;
+        margin-top: 0;
+    }
+}

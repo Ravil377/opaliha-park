@@ -1,0 +1,33 @@
+@use "sass:math";
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.icon-arrow-left {
+    width: math.div(30, 22) * 1em;
+}
+.icon-arrow-up {
+    width: math.div(32, 32) * 1em;
+}
+.icon-doc {
+    width: math.div(54, 67) * 1em;
+}
+.icon-email {
+    width: math.div(22, 16) * 1em;
+}
+.icon-loc {
+    width: math.div(18, 27) * 1em;
+}
+.icon-phone {
+    width: math.div(14, 22) * 1em;
+}
+.icon-tg {
+    width: math.div(24, 24) * 1em;
+}
+.icon-vk {
+    width: math.div(24, 24) * 1em;
+}

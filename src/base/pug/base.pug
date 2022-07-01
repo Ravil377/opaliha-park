@@ -1,0 +1,35 @@
+include ../../mixins/pug/svg-icon
+block variables
+    -
+        var baseDir = './';
+
+doctype html
+html(lang="ru")
+    //- Include head
+    include ./head
+
+    body(class=pageClass)
+        .wrapper
+            .wrapper__content
+                //- Include header
+                include ../../components/header/header
+                block welcome
+                block history
+                block solutions
+                block layouts
+                block progress
+                block documents
+                block contacts            
+            //- Include footer
+            include ../../components/footer/footer
+
+        //- Include callback
+        include ../../components/form/form--callback
+
+        a.go-top.go-top--js(href='#')
+            +icon('arrow-up')
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src=`${baseDir}js/main.js`)
+
+        block script

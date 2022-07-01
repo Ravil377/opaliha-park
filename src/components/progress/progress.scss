@@ -1,0 +1,92 @@
+.progress__container {
+    position: relative;
+}
+
+.progress {
+    background: #EDF5F8;
+}
+.progress__list {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    @media (min-width: 992px) {
+        margin-top: 50px;
+    }
+}
+.swiper__progress {
+    overflow: hidden;
+}
+.progress__item {
+    padding: 20px 20px 33px 20px;
+    border-radius: 60px 30px 0px 30px / 0px 30px 0px 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 23.2px rgba(93, 161, 186, 0.15);
+    min-height: 274px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+    position: relative;
+    @media (max-width: 768px) {
+        max-width: 282px;
+        width: 100%;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $green;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition-property: transform;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+      }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 227px;
+        height: 227px;
+        border-radius: 50%;
+        right: -47px;
+        bottom: -42px;
+        background: linear-gradient(90deg, #70B30E 0%, #B6FA53 100%);
+        opacity: 0;
+        transition: .7s;
+        transform: translateX(100%);
+    }
+    &:hover {
+        // background-color: $green;
+        color: white;
+        &::before {
+            transform: scaleX(1);
+        }
+        &::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+.progress__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: inherit;
+    @include transit();
+    z-index: 2;
+}
+
+.progress__date {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: auto;
+    color: inherit;
+    @include transit();
+    z-index: 2;
+}

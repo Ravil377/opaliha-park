@@ -1,0 +1,23 @@
+.history {
+    background: url('../images/decor_tree.png') no-repeat;
+    background-size: 315px 419px;
+    background-position: right bottom;
+}
+
+.history, 
+.solutions,
+.layouts,
+.progress,
+.documents,
+.contacts {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.history__content {
+    p {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
