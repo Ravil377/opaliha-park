@@ -36,7 +36,7 @@
     &:before {
         content: "";
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -80,6 +80,7 @@
     color: inherit;
     @include transit();
     z-index: 2;
+    margin-bottom: 20px;
 }
 
 .progress__date {
@@ -89,4 +90,32 @@
     color: inherit;
     @include transit();
     z-index: 2;
+}
+
+.progress__news {
+    background: unset;
+    .progress__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) {
+            display: grid;
+            margin: -20px;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .progress__item {
+            margin-bottom: 40px;
+            @media (max-width: 768px) {
+                max-width: 100%;
+                min-height: 130px;
+            }
+            @media (min-width: 768px) {
+                margin: 20px;
+                margin-bottom: 0;
+            }            
+        }
+    }
 }

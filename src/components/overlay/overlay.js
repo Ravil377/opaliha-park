@@ -14,10 +14,3 @@ export function overlayToggle() {
 		body.appendChild(overlay)
 	}	
 }
-// export function overlayRemove() {
-// 	const overlay = document.querySelector('.overlay')
-// 	if (overlay) {
-// 		overlay.remove()
-// 	}
-	
-// }
