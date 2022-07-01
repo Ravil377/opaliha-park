@@ -14,10 +14,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _progress_progress__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./progress/progress */ "./src/components/progress/progress.js");
 /* harmony import */ var _contacts_contacts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contacts/contacts */ "./src/components/contacts/contacts.js");
 /* harmony import */ var _contacts_contacts__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_contacts_contacts__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _details_details__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./details/details */ "./src/components/details/details.js");
 // Form
 // import './form/form'
 // Hamburger
 // import './hamburger/hamburger'
+
 
 
 
@@ -51,6 +53,32 @@ function init() {
     iconImageOffset: [-25, -40]
   });
   map.geoObjects.add(placemark);
+}
+
+/***/ }),
+
+/***/ "./src/components/details/details.js":
+/*!*******************************************!*\
+  !*** ./src/components/details/details.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+var details = '.details__slider-js';
+
+if (document.querySelector(details)) {
+  var detailsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](details, {
+    slidesPerView: 1,
+    spaceBetween: 42,
+    navigation: {
+      nextEl: '.details__button-next-js',
+      prevEl: '.details__button-prev-js'
+    }
+  });
 }
 
 /***/ }),
