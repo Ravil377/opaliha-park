@@ -12582,7 +12582,7 @@ ol {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -12833,6 +12833,14 @@ ol {
   background-position: center;
   background-size: cover;
   height: 269px;
+  display: flex;
+  align-items: center;
+}
+.welcome h2, .welcome .h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .title {
@@ -13153,7 +13161,7 @@ ol {
 .progress__item:before {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
   right: 0;
@@ -13196,6 +13204,7 @@ ol {
   color: inherit;
   transition: all 0.24s;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
 .progress__date {
@@ -13205,6 +13214,42 @@ ol {
   color: inherit;
   transition: all 0.24s;
   z-index: 2;
+}
+
+.progress__news {
+  background: unset;
+}
+.progress__news .progress__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .progress__news .progress__list {
+    display: grid;
+    margin: -20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .progress__news .progress__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.progress__news .progress__list .progress__item {
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .progress__news .progress__list .progress__item {
+    max-width: 100%;
+    min-height: 130px;
+  }
+}
+@media (min-width: 768px) {
+  .progress__news .progress__list .progress__item {
+    margin: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .documents ul {
@@ -13406,6 +13451,41 @@ ol {
   transition: transform 0.2s ease;
   height: 2px;
   width: 100%;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs a, .breadcrumbs p {
+  font-weight: 300;
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.5rem;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  transition: all 0.24s;
+}
+.breadcrumbs a:hover {
+  color: #7CB92C;
+}
+.breadcrumbs p {
+  color: #8A9599;
+}
+.breadcrumbs__divider {
+  position: relative;
+  width: 11px;
+  height: 8px;
+  margin: 0 10px;
+}
+.breadcrumbs__divider svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  fill: #8A9599;
+  transform: scale(-1);
 }
 
 .footer {

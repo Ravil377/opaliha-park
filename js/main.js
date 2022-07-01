@@ -161,12 +161,7 @@ function overlayToggle() {
     }, 100);
     body.appendChild(_overlay);
   }
-} // export function overlayRemove() {
-// 	const overlay = document.querySelector('.overlay')
-// 	if (overlay) {
-// 		overlay.remove()
-// 	}
-// }
+}
 
 /***/ }),
 
