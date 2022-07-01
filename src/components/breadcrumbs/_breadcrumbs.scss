@@ -1,11 +1,13 @@
 .breadcrumbs {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     a, p {
         font-weight: 300;
         font-size: 14px;
         margin: 0;
         line-height: 24px;
+        white-space: nowrap;
     }
     a {
         text-decoration: none;
@@ -22,6 +24,7 @@
         width: 11px;
         height: 8px;
         margin: 0 10px;
+
         svg {
             position: absolute;
             top: 0;
